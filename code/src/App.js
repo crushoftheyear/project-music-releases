@@ -6,11 +6,14 @@ console.log(data.albums.items)
 
 export const App = () => {
   return (
-    <div>
-      {data.albums.items.map(album => {
-        return (<AlbumCard key={album.id} albumLink={album.external_urls.spotify} src={album.images[0].url} title={album.name} artistLink={album.artists.external_urls.spotify} artist={album.artists} />
-        )
-      })}
-    </div>
+    <section>
+      <h1>News albums & singles</h1>
+      <div className="album-container">
+        {data.albums.items.map(album => {
+          return (<AlbumCard key={album.id} albumLink={album.external_urls.spotify} src={album.images[0].url} title={album.name} artistLink={album.artists} artist={album.artists} />
+          )
+        })}
+      </div>
+    </section>
   )
 }
