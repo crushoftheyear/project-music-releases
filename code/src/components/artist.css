@@ -1,0 +1,8 @@
+h3 {
+  font-size: 14px;
+  color:#a0a0a0;
+}
+
+h3 a {
+  margin-right: 8px; /* Adds margin to make a space when there are multiple artists*/
+}

@@ -6,8 +6,11 @@
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  padding: 10px;
- position: relative;
+  padding: 10px 10px 40px;
+}
+
+.album-cover {
+  position: relative; /* Moved this property from .album-card so the overlay fits */
 }
 
 .album-card img {
@@ -15,8 +18,8 @@
 }
 
 h2, h3 {
-  margin:0;
-  margin-top:10px;
+  margin: 0;
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 768px) {

@@ -1,22 +1,25 @@
 .overlay {
-  display: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* To prevent the icon children to stretch vertically */
+  visibility: hidden; /* Changed to visibility from display: none; */
+
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  
 } 
 
 .album-cover:hover .overlay {
-  display: inline-flex;
-  justify-content: space-around;
+  visibility: visible;
 }
 
 svg {
   fill: #fff;
   width: 40px;
+  cursor: pointer; /* Added pointer hand on icons */
 }
 
 .icon-play {

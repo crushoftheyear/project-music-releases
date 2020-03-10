@@ -7,22 +7,27 @@ export const AlbumCard = (props) => {
   return (
     <article className="album-card">
 
-      <a className="album-cover" href={props.albumLink}>
+      <div className="album-cover">
         <img src={props.src} alt=""></img>
         <HoverOverlay />
-      </a>
+      </div>
 
-      <h2>{props.title}</h2>
+      <h2>
+        <a href={props.albumLink}>{props.title}</a>
+      </h2>
 
-      {props.artists.map(artist => {
-        return (
-          <Artist
-            key={artist.id}
-            artistName={artist.name}
-            artistLink={artist.external_urls.spotify}
-          />
-        )
-      })}
+
+      <h3>
+        {props.artists.map(artist => {
+          return (
+            <Artist
+              key={artist.id}
+              artistName={artist.name}
+              artistLink={artist.external_urls.spotify}
+            />
+          )
+        })}
+      </h3>
 
     </article>
   )
