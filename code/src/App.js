@@ -1,6 +1,7 @@
 import React from 'react'
 import data from './data.json'
 import { AlbumCard } from './components/AlbumCard.js'
+import './app.css'
 
 export const App = () => {
   return (
