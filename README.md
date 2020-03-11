@@ -10,3 +10,8 @@ If we had more time we would have added more components (e.g. album cover) to ge
 ## View it live
 
 https://music-releases-react.netlify.com/
+
+---
+
+
+*Built by Emma Prené & Kajsa Holmström.*
