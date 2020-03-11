@@ -1,8 +1,8 @@
 .overlay {
   display: flex;
   justify-content: space-around;
-  align-items: center; /* To prevent the icon children to stretch vertically */
-  visibility: hidden; /* Changed to visibility from display: none; */
+  align-items: center;
+  visibility: hidden;
 
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -19,7 +19,7 @@
 svg {
   fill: #fff;
   width: 40px;
-  cursor: pointer; /* Added pointer hand on icons */
+  cursor: pointer;
 }
 
 .icon-play {

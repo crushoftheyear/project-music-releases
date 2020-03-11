@@ -16,7 +16,6 @@ export const AlbumCard = (props) => {
         <a href={props.albumLink}>{props.title}</a>
       </h2>
 
-
       <h3>
         {props.artists.map(artist => {
           return (

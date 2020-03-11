@@ -16,10 +16,11 @@ export const App = () => {
               albumLink={album.external_urls.spotify}
               src={album.images[0].url}
               title={album.name}
-              artists={album.artists} // This is used to map each artist in AlbumCard
+              artists={album.artists} // This is used like a variable to map each artist in the AlbumCard component
             />
           )
         })}
+
       </div>
     </section>
   )

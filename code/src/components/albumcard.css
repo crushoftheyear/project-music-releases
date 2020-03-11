@@ -10,11 +10,16 @@
 }
 
 .album-cover {
-  position: relative; /* Moved this property from .album-card so the overlay fits */
+  position: relative;
 }
 
 .album-card img {
  width: 100%;
+}
+
+h2 {
+  font-size: 14px;
+  color: #fff;
 }
 
 h2, h3 {
