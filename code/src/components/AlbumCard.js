@@ -4,20 +4,22 @@ import { Artist } from './Artist.js'
 import './albumcard.css'
 
 export const AlbumCard = (props) => {
+  const { imgSrc, albumLink, title, artists } = props;
+
   return (
     <article className="album-card">
 
       <div className="album-cover">
-        <img src={props.src} alt=""></img>
+        <img src={imgSrc} alt=""></img>
         <HoverOverlay />
       </div>
 
       <h2>
-        <a href={props.albumLink}>{props.title}</a>
+        <a href={albumLink}>{title}</a>
       </h2>
 
       <h3>
-        {props.artists.map(artist => {
+        {artists.map(artist => {
           return (
             <Artist
               key={artist.id}

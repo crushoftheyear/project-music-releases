@@ -15,7 +15,7 @@ export const App = () => {
             <AlbumCard
               key={album.id}
               albumLink={album.external_urls.spotify}
-              src={album.images[0].url}
+              imgSrc={album.images[0].url}
               title={album.name}
               artists={album.artists} // This is used like a variable to map each artist in the AlbumCard component
             />
