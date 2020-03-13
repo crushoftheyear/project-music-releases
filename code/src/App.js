@@ -7,17 +7,16 @@ export const App = () => {
   return (
     <section>
       <h1>News albums & singles</h1>
-
       <div className="album-container">
 
         {data.albums.items.map(album => {
           return (
             <AlbumCard
               key={album.id}
-              albumLink={album.external_urls.spotify}
-              imgSrc={album.images[0].url}
-              title={album.name}
-              artists={album.artists} // This is used like a variable to map each artist in the AlbumCard component
+              item={album}
+            // albumLink={album.external_urls.spotify}
+            // imgSrc={album.images[0].url}
+            // title={album.name}
             />
           )
         })}

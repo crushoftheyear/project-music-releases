@@ -1,21 +1,18 @@
 import React from 'react'
-import { HoverOverlay } from './HoverOverlay.js'
 import { Artist } from './Artist.js'
+import { AlbumCover } from './AlbumCover.js'
 import './albumcard.css'
 
 export const AlbumCard = (props) => {
-  const { imgSrc, albumLink, title, artists } = props;
+  const { artists, external_urls, images, name } = props.item;
 
   return (
     <article className="album-card">
 
-      <div className="album-cover">
-        <img src={imgSrc} alt=""></img>
-        <HoverOverlay />
-      </div>
+      <AlbumCover images={images[0].url} />
 
       <h2>
-        <a href={albumLink}>{title}</a>
+        <a href={external_urls.spotify}>{name}</a>
       </h2>
 
       <h3>
@@ -23,8 +20,7 @@ export const AlbumCard = (props) => {
           return (
             <Artist
               key={artist.id}
-              artistName={artist.name}
-              artistLink={artist.external_urls.spotify}
+              item={artist}
             />
           )
         })}
