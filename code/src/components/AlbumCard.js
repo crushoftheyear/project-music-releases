@@ -1,6 +1,7 @@
 import React from 'react'
 import { Artist } from './Artist.js'
 import { AlbumCover } from './AlbumCover.js'
+import { AlbumTitle } from './AlbumTitle.js'
 import './albumcard.css'
 
 export const AlbumCard = (props) => {
@@ -11,18 +12,11 @@ export const AlbumCard = (props) => {
 
       <AlbumCover images={images[0].url} />
 
-      <h2>
-        <a href={external_urls.spotify}>{name}</a>
-      </h2>
+      <AlbumTitle link={external_urls.spotify} title={name} />
 
       <h3>
         {artists.map(artist => {
-          return (
-            <Artist
-              key={artist.id}
-              item={artist}
-            />
-          )
+          return <Artist key={artist.id} item={artist} />
         })}
       </h3>
 

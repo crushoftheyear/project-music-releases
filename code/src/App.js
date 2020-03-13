@@ -10,15 +10,7 @@ export const App = () => {
       <div className="album-container">
 
         {data.albums.items.map(album => {
-          return (
-            <AlbumCard
-              key={album.id}
-              item={album}
-            // albumLink={album.external_urls.spotify}
-            // imgSrc={album.images[0].url}
-            // title={album.name}
-            />
-          )
+          return <AlbumCard key={album.id} item={album} />
         })}
 
       </div>
